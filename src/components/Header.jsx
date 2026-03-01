@@ -7,9 +7,6 @@ const Header = () => {
         <h1 className="text-2xl font-semibold text-gray-800">
           Hmawbi Region SDG Indicators Dashboard
         </h1>
-        <p className="text-sm text-gray-600 mt-1">
-          Sustainable Development Goals | Health Indicators by Region
-        </p>
       </div>
     </header>
   );

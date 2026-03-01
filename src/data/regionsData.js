@@ -1,7 +1,7 @@
 export const regionsData = {
   mch: {
-    name: "MCH - မိခင် နှင့် ကလေး",
-    myanmarName: "MCH - မိခင် နှင့် ကလေး",
+    name: "MCH - Maternal and Child Health",
+    myanmarName: "MCH - မိခင်နှင့်ကလေး",
     indicators: [
       {
         id: "mmr",
@@ -38,7 +38,7 @@ export const regionsData = {
     ]
   },
   yaeman: {
-    name: "Myang Ta Gar RHC",
+    name: "Myauk Taka RHC",
     myanmarName: "မြောင်းတကာ RHC",
     indicators: [
       {

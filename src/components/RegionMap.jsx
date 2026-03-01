@@ -9,13 +9,19 @@ const RegionMap = ({ regions, selectedRegion, onRegionClick }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-sm p-4">
-      <h2 className="text-lg font-medium text-gray-700 mb-4">Hmawbi Township - Health Facility Map</h2>
+    <div className="bg-white rounded-xl shadow-sm p-3 md:p-4">
+      <div className="flex items-center justify-between mb-3">
+        <h2 className="text-base md:text-lg font-medium text-gray-700">Hmawbi Township - Health Facility Map</h2>
+        <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
+          6 Facilities
+        </span>
+      </div>
+      
       <div className="aspect-square w-full max-w-2xl mx-auto">
         <svg
           viewBox="0 0 800 600"
           className="w-full h-full"
-          style={{ minHeight: '450px' }}
+          style={{ minHeight: { mobile: '300px', desktop: '450px' } }}
         >
           {/* Background - Township Boundary */}
           <path 
@@ -62,7 +68,7 @@ const RegionMap = ({ regions, selectedRegion, onRegionClick }) => {
             strokeDasharray="10,10"
           />
 
-          {/* MCH - Main Central Health (Largest facility in township center) */}
+          {/* MCH */}
           <g onClick={() => onRegionClick('mch')} className="cursor-pointer">
             <path
               d="M350,250 L450,230 L470,320 L380,340 L340,290 Z"
@@ -72,23 +78,23 @@ const RegionMap = ({ regions, selectedRegion, onRegionClick }) => {
             <circle cx="400" cy="280" r="8" fill="white" stroke="black" strokeWidth="2" />
             <text
               x="400"
-              y="220"
+              y="200"
               textAnchor="middle"
-              className="text-sm font-bold fill-gray-800 pointer-events-none"
+              className="text-xs md:text-sm font-bold fill-gray-800 pointer-events-none"
             >
               MCH
             </text>
             <text
               x="400"
-              y="240"
+              y="220"
               textAnchor="middle"
-              className="text-xs fill-gray-600 pointer-events-none"
+              className="text-[8px] md:text-xs fill-gray-600 pointer-events-none md:block hidden"
             >
-              Main Central Health
+              Maternal and Child Health
             </text>
           </g>
 
-          {/* ေြမာင်းတကာ RHC - Northern Area */}
+          {/* မြောင်းတကာ RHC - Northern Area */}
           <g onClick={() => onRegionClick('yaeman')} className="cursor-pointer">
             <path
               d="M180,80 L280,70 L290,150 L200,160 L160,120 Z"
@@ -100,15 +106,15 @@ const RegionMap = ({ regions, selectedRegion, onRegionClick }) => {
               x="220"
               y="50"
               textAnchor="middle"
-              className="text-xs font-medium fill-gray-800 pointer-events-none"
+              className="text-[9px] md:text-xs font-medium fill-gray-800 pointer-events-none"
             >
-             မြောင်းတကာ
+              မြောင်းတကာ
             </text>
             <text
               x="220"
               y="70"
               textAnchor="middle"
-              className="text-xs fill-gray-600 pointer-events-none"
+              className="text-[8px] md:text-xs fill-gray-600 pointer-events-none"
             >
               RHC
             </text>
@@ -126,7 +132,7 @@ const RegionMap = ({ regions, selectedRegion, onRegionClick }) => {
               x="610"
               y="30"
               textAnchor="middle"
-              className="text-xs font-medium fill-gray-800 pointer-events-none"
+              className="text-[9px] md:text-xs font-medium fill-gray-800 pointer-events-none"
             >
               ဆပ်သွားတော
             </text>
@@ -134,7 +140,7 @@ const RegionMap = ({ regions, selectedRegion, onRegionClick }) => {
               x="610"
               y="50"
               textAnchor="middle"
-              className="text-xs fill-gray-600 pointer-events-none"
+              className="text-[8px] md:text-xs fill-gray-600 pointer-events-none"
             >
               RHC
             </text>
@@ -152,7 +158,7 @@ const RegionMap = ({ regions, selectedRegion, onRegionClick }) => {
               x="660"
               y="340"
               textAnchor="middle"
-              className="text-xs font-medium fill-gray-800 pointer-events-none"
+              className="text-[9px] md:text-xs font-medium fill-gray-800 pointer-events-none"
             >
               ရွှေလှေကြီး
             </text>
@@ -160,39 +166,13 @@ const RegionMap = ({ regions, selectedRegion, onRegionClick }) => {
               x="660"
               y="360"
               textAnchor="middle"
-              className="text-xs fill-gray-600 pointer-events-none"
+              className="text-[8px] md:text-xs fill-gray-600 pointer-events-none"
             >
               RHC
             </text>
           </g>
 
           {/* ဝါးနက်ချောင်း RHC - Southern */}
-          <g onClick={() => onRegionClick('warnet')} className="cursor-pointer">
-            <path
-              d="M120,480 L220,470 L240,550 L130,560 L90,520 Z"
-              className={getRegionColor('mch')}
-              strokeWidth="2"
-            />
-            <circle cx="170" cy="515" r="6" fill="white" stroke="black" />
-            <text
-              x="170"
-              y="440"
-              textAnchor="middle"
-              className="text-xs font-medium fill-gray-800 pointer-events-none"
-            >
-              ဝါးနက်ချောင်း
-            </text>
-            <text
-              x="170"
-              y="460"
-              textAnchor="middle"
-              className="text-xs fill-gray-600 pointer-events-none"
-            >
-              RHC
-            </text>
-          </g>
-
-          {/* ဝါးနက်ချောင်း RHC - fix color */}
           <g onClick={() => onRegionClick('warnet')} className="cursor-pointer">
             <path
               d="M120,480 L220,470 L240,550 L130,560 L90,520 Z"
@@ -204,7 +184,7 @@ const RegionMap = ({ regions, selectedRegion, onRegionClick }) => {
               x="170"
               y="440"
               textAnchor="middle"
-              className="text-xs font-medium fill-gray-800 pointer-events-none"
+              className="text-[9px] md:text-xs font-medium fill-gray-800 pointer-events-none"
             >
               ဝါးနက်ချောင်း
             </text>
@@ -212,13 +192,13 @@ const RegionMap = ({ regions, selectedRegion, onRegionClick }) => {
               x="170"
               y="460"
               textAnchor="middle"
-              className="text-xs fill-gray-600 pointer-events-none"
+              className="text-[8px] md:text-xs fill-gray-600 pointer-events-none"
             >
               RHC
             </text>
           </g>
 
-          {/* Sub Health Center - Small facility near MCH */}
+          {/* Sub Health Center */}
           <g onClick={() => onRegionClick('subcenter')} className="cursor-pointer">
             <ellipse
               cx="500"
@@ -233,7 +213,7 @@ const RegionMap = ({ regions, selectedRegion, onRegionClick }) => {
               x="500"
               y="270"
               textAnchor="middle"
-              className="text-xs fill-gray-800 pointer-events-none"
+              className="text-[8px] md:text-xs fill-gray-800 pointer-events-none"
             >
               Sub
             </text>
@@ -241,74 +221,87 @@ const RegionMap = ({ regions, selectedRegion, onRegionClick }) => {
               x="500"
               y="285"
               textAnchor="middle"
-              className="text-xs fill-gray-600 pointer-events-none"
+              className="text-[7px] md:text-xs fill-gray-600 pointer-events-none md:block hidden"
             >
               Center
             </text>
           </g>
 
-          {/* Villages/Small communities (dots) */}
+          {/* Villages/Small communities */}
           <circle cx="280" cy="180" r="3" fill="#2d3748" />
           <circle cx="520" cy="200" r="3" fill="#2d3748" />
           <circle cx="350" cy="400" r="3" fill="#2d3748" />
           <circle cx="450" cy="450" r="3" fill="#2d3748" />
           
-          {/* Village labels */}
-          <text x="290" y="175" className="text-[8px] fill-gray-500">ရွာမ</text>
-          <text x="530" y="195" className="text-[8px] fill-gray-500">အနောက်ရွာ</text>
+          {/* Village labels - hide on mobile */}
+          <text x="290" y="175" className="text-[8px] fill-gray-500 hidden md:block">ရွာမ</text>
+          <text x="530" y="195" className="text-[8px] fill-gray-500 hidden md:block">အနောက်ရွာ</text>
 
-          {/* Scale bar */}
-          <rect x="50" y="580" width="100" height="4" fill="#4a5568" />
-          <text x="50" y="575" className="text-[8px] fill-gray-600">0</text>
-          <text x="145" y="575" className="text-[8px] fill-gray-600">5 km</text>
+          {/* Scale bar - hide on mobile */}
+          <g className="hidden md:block">
+            <rect x="50" y="580" width="100" height="4" fill="#4a5568" />
+            <text x="50" y="575" className="text-[8px] fill-gray-600">0</text>
+            <text x="145" y="575" className="text-[8px] fill-gray-600">5 km</text>
+          </g>
 
           {/* North arrow */}
           <path d="M730,50 L740,30 L750,50 L740,45 L740,70 L730,70 L730,45 Z" fill="#4a5568" />
           <text x="740" y="25" className="text-[8px] fill-gray-600" textAnchor="middle">N</text>
 
-          {/* Legend */}
-          <g className="legend" transform="translate(600, 500)">
+          {/* Legend - hide on mobile */}
+          <g className="legend hidden md:block" transform="translate(600, 500)">
             <rect width="120" height="70" fill="white" fillOpacity="0.9" stroke="#cbd5e0" rx="4" />
             <text x="10" y="20" className="text-[9px] font-bold fill-gray-700">Legend</text>
             <circle cx="20" cy="35" r="6" fill="#bfdbfe" stroke="#3182ce" />
-            <text x="35" cy="40" className="text-[8px] fill-gray-600">Health Facility</text>
+            <text x="35" y="40" className="text-[8px] fill-gray-600">Health Facility</text>
             <circle cx="20" cy="55" r="6" fill="#2563eb" stroke="#1e40af" />
             <text x="35" y="60" className="text-[8px] fill-gray-600">Selected</text>
           </g>
         </svg>
       </div>
       
-      {/* Facility Information */}
-      <div className="grid grid-cols-2 gap-3 mt-4 p-3 bg-gray-50 rounded-lg">
-        <div className="space-y-1">
-          <div className="flex items-center gap-2">
-            <div className={`w-4 h-4 ${selectedRegion === 'mch' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded`}></div>
-            <span className="text-xs">MCH</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className={`w-4 h-4 ${selectedRegion === 'yaeman' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded`}></div>
-            <span className="text-xs">‌မြောင်းတကာ RHC</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className={`w-4 h-4 ${selectedRegion === 'satthwar' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded`}></div>
-            <span className="text-xs">ဆပ်သွားတော RHC</span>
-          </div>
+      {/* Compact Facility Information - Optimized for both mobile and desktop */}
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-4 p-3 bg-gray-50 rounded-lg">
+        <div className="flex items-center gap-2">
+          <div className={`w-3 h-3 ${selectedRegion === 'mch' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded flex-shrink-0`}></div>
+          <span className="text-xs truncate">MCH</span>
         </div>
-        <div className="space-y-1">
-          <div className="flex items-center gap-2">
-            <div className={`w-4 h-4 ${selectedRegion === 'shwethal' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded`}></div>
-            <span className="text-xs">ရွှေလှေကြီး RHC</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className={`w-4 h-4 ${selectedRegion === 'warnet' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded`}></div>
-            <span className="text-xs">ဝါးနက်ချောင်း RHC</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className={`w-4 h-4 ${selectedRegion === 'subcenter' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded-full`}></div>
-            <span className="text-xs">Sub Health Center</span>
-          </div>
+        <div className="flex items-center gap-2">
+          <div className={`w-3 h-3 ${selectedRegion === 'yaeman' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded flex-shrink-0`}></div>
+          <span className="text-xs truncate">မြောင်းတကာ RHC</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className={`w-3 h-3 ${selectedRegion === 'satthwar' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded flex-shrink-0`}></div>
+          <span className="text-xs truncate">ဆပ်သွားတော RHC</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className={`w-3 h-3 ${selectedRegion === 'shwethal' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded flex-shrink-0`}></div>
+          <span className="text-xs truncate">ရွှေလှေကြီး RHC</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className={`w-3 h-3 ${selectedRegion === 'warnet' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded flex-shrink-0`}></div>
+          <span className="text-xs truncate">ဝါးနက်ချောင်း RHC</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className={`w-3 h-3 ${selectedRegion === 'subcenter' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded-full flex-shrink-0`}></div>
+          <span className="text-xs truncate">Sub Center</span>
         </div>
       </div>
+
+      {/* Selected region indicator for mobile */}
+      {selectedRegion && (
+        <div className="mt-3 p-2 bg-blue-50 border border-blue-200 rounded-lg md:hidden">
+          <p className="text-xs text-blue-800">
+            <span className="font-medium">Selected: </span>
+            {selectedRegion === 'mch' && 'MCH'}
+            {selectedRegion === 'yaeman' && 'မြောင်းတကာ RHC'}
+            {selectedRegion === 'satthwar' && 'ဆပ်သွားတော RHC'}
+            {selectedRegion === 'shwethal' && 'ရွှေလှေကြီး RHC'}
+            {selectedRegion === 'warnet' && 'ဝါးနက်ချောင်း RHC'}
+            {selectedRegion === 'subcenter' && 'Sub Health Center'}
+          </p>
+        </div>
+      )}
 
       <p className="text-xs text-gray-500 text-center mt-3">
         Click any health facility to view indicators • Hmawbi Township, Yangon Region
