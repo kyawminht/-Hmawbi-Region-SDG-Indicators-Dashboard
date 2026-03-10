@@ -6,33 +6,41 @@ export const regionsData = {
       {
         id: "mmr",
         title: "Maternal Mortality Ratio",
-        value: 48.4,
+        value: 0.0,
         unit: "per 100,000 live births",
-        target: "< 70",
-        status: "good"
-      },
-      {
-        id: "u5",
-        title: "Under-5 Mortality Rate",
-        value: 7.3,
-        unit: "per 1,000 live births",
-        target: "< 25",
+        target: "< 86",
         status: "good"
       },
       {
         id: "skilled_birth",
         title: "Births Attended by Skilled Personnel",
-        value: 96.7,
+        value: 100,
         unit: "%",
         target: "> 85%",
         status: "good"
       },
       {
-        id: "vaccination",
-        title: "Full Vaccination Coverage",
-        value: 94.2,
-        unit: "%",
-        target: "> 90%",
+        id: "u5_mortality",
+        title: "Under-5 Mortality Rate",
+        value: 0.0,
+        unit: "per 1,000 live births",
+        target: "< 36",
+        status: "good"
+      },
+      {
+        id: "neonatal_mortality",
+        title: "Neonatal Mortality Rate",
+        value: 0.0,
+        unit: "per 1,000 live births",
+        target: "< 21",
+        status: "good"
+      },
+      {
+        id: "infant_mortality",
+        title: "Infant Mortality Rate",
+        value: 0.0,
+        unit: "per 1,000 live births",
+        target: "< 32",
         status: "good"
       }
     ]
@@ -44,110 +52,42 @@ export const regionsData = {
       {
         id: "mmr",
         title: "Maternal Mortality Ratio",
-        value: 82.5,
+        value: 154.2,
         unit: "per 100,000 live births",
-        target: "< 70",
-        status: "warning"
-      },
-      {
-        id: "u5",
-        title: "Under-5 Mortality Rate",
-        value: 18.2,
-        unit: "per 1,000 live births",
-        target: "< 25",
-        status: "good"
-      },
-      {
-        id: "skilled_birth",
-        title: "Births Attended by Skilled Personnel",
-        value: 88.3,
-        unit: "%",
-        target: "> 85%",
-        status: "good"
-      },
-      {
-        id: "vaccination",
-        title: "Full Vaccination Coverage",
-        value: 86.5,
-        unit: "%",
-        target: "> 90%",
-        status: "warning"
-      }
-    ]
-  },
-  satthwar: {
-    name: "Sat Thwar Taw RHC",
-    myanmarName: "ဆပ်သွားတော RHC",
-    indicators: [
-      {
-        id: "mmr",
-        title: "Maternal Mortality Ratio",
-        value: 65.3,
-        unit: "per 100,000 live births",
-        target: "< 70",
-        status: "good"
-      },
-      {
-        id: "u5",
-        title: "Under-5 Mortality Rate",
-        value: 22.1,
-        unit: "per 1,000 live births",
-        target: "< 25",
-        status: "good"
-      },
-      {
-        id: "skilled_birth",
-        title: "Births Attended by Skilled Personnel",
-        value: 82.4,
-        unit: "%",
-        target: "> 85%",
-        status: "warning"
-      },
-      {
-        id: "vaccination",
-        title: "Full Vaccination Coverage",
-        value: 79.8,
-        unit: "%",
-        target: "> 90%",
-        status: "warning"
-      }
-    ]
-  },
-  shwethal: {
-    name: "Shwe Thal Gyi RHC",
-    myanmarName: "ရွှေလှေကြီး RHC",
-    indicators: [
-      {
-        id: "mmr",
-        title: "Maternal Mortality Ratio",
-        value: 125.7,
-        unit: "per 100,000 live births",
-        target: "< 70",
-        status: "critical"
-      },
-      {
-        id: "u5",
-        title: "Under-5 Mortality Rate",
-        value: 35.4,
-        unit: "per 1,000 live births",
-        target: "< 25",
+        target: "< 86",
         status: "critical"
       },
       {
         id: "skilled_birth",
         title: "Births Attended by Skilled Personnel",
-        value: 62.8,
+        value: 100,
         unit: "%",
         target: "> 85%",
-        status: "critical"
+        status: "good"
       },
       {
-        id: "vaccination",
-        title: "Full Vaccination Coverage",
-        value: 68.3,
-        unit: "%",
-        target: "> 90%",
-        status: "critical"
+        id: "u5_mortality",
+        title: "Under-5 Mortality Rate",
+        value: 6.2,
+        unit: "per 1,000 live births",
+        target: "< 36",
+        status: "good"
+      },
+      {
+        id: "neonatal_mortality",
+        title: "Neonatal Mortality Rate",
+        value: 3.1,
+        unit: "per 1,000 live births",
+        target: "< 21",
+        status: "good"
+      },
+      {
+        id: "infant_mortality",
+        title: "Infant Mortality Rate",
+        value: 4.6,
+        unit: "per 1,000 live births",
+        target: "< 32",
+        status: "good"
       }
     ]
   },
@@ -158,71 +98,179 @@ export const regionsData = {
       {
         id: "mmr",
         title: "Maternal Mortality Ratio",
-        value: 95.6,
+        value: 0.0,
         unit: "per 100,000 live births",
-        target: "< 70",
-        status: "critical"
-      },
-      {
-        id: "u5",
-        title: "Under-5 Mortality Rate",
-        value: 28.7,
-        unit: "per 1,000 live births",
-        target: "< 25",
-        status: "warning"
+        target: "< 86",
+        status: "good"
       },
       {
         id: "skilled_birth",
         title: "Births Attended by Skilled Personnel",
-        value: 75.2,
+        value: 100,
         unit: "%",
         target: "> 85%",
-        status: "warning"
+        status: "good"
       },
       {
-        id: "vaccination",
-        title: "Full Vaccination Coverage",
-        value: 82.1,
-        unit: "%",
-        target: "> 90%",
-        status: "warning"
+        id: "u5_mortality",
+        title: "Under-5 Mortality Rate",
+        value: 0.0,
+        unit: "per 1,000 live births",
+        target: "< 36",
+        status: "good"
+      },
+      {
+        id: "neonatal_mortality",
+        title: "Neonatal Mortality Rate",
+        value: 0.0,
+        unit: "per 1,000 live births",
+        target: "< 21",
+        status: "good"
+      },
+      {
+        id: "infant_mortality",
+        title: "Infant Mortality Rate",
+        value: 0.0,
+        unit: "per 1,000 live births",
+        target: "< 32",
+        status: "good"
       }
     ]
   },
-  subcenter: {
-    name: "Sub Health Center",
-    myanmarName: "ကျန်းမာရေးဌာနခွဲ",
+  satthwar: {
+    name: "Sat Thwar Taw RHC",
+    myanmarName: "ဆပ်သွားတော RHC",
     indicators: [
       {
         id: "mmr",
         title: "Maternal Mortality Ratio",
-        value: 72.8,
+        value: 0.0,
         unit: "per 100,000 live births",
-        target: "< 70",
-        status: "warning"
-      },
-      {
-        id: "u5",
-        title: "Under-5 Mortality Rate",
-        value: 16.5,
-        unit: "per 1,000 live births",
-        target: "< 25",
+        target: "< 86",
         status: "good"
       },
       {
         id: "skilled_birth",
         title: "Births Attended by Skilled Personnel",
-        value: 84.6,
+        value: 87,
         unit: "%",
         target: "> 85%",
         status: "good"
       },
       {
-        id: "vaccination",
-        title: "Full Vaccination Coverage",
-        value: 88.9,
+        id: "u5_mortality",
+        title: "Under-5 Mortality Rate",
+        value: 11.8,
+        unit: "per 1,000 live births",
+        target: "< 36",
+        status: "good"
+      },
+      {
+        id: "neonatal_mortality",
+        title: "Neonatal Mortality Rate",
+        value: 3.9,
+        unit: "per 1,000 live births",
+        target: "< 21",
+        status: "good"
+      },
+      {
+        id: "infant_mortality",
+        title: "Infant Mortality Rate",
+        value: 9.8,
+        unit: "per 1,000 live births",
+        target: "< 32",
+        status: "good"
+      }
+    ]
+  },
+  yaykyaw: {
+    name: "Yay Kyaw RHC",
+    myanmarName: "ရေကျော် RHC",
+    indicators: [
+      {
+        id: "mmr",
+        title: "Maternal Mortality Ratio",
+        value: 0.0,
+        unit: "per 100,000 live births",
+        target: "< 86",
+        status: "good"
+      },
+      {
+        id: "skilled_birth",
+        title: "Births Attended by Skilled Personnel",
+        value: 100,
         unit: "%",
-        target: "> 90%",
+        target: "> 85%",
+        status: "good"
+      },
+      {
+        id: "u5_mortality",
+        title: "Under-5 Mortality Rate",
+        value: 15.8,
+        unit: "per 1,000 live births",
+        target: "< 36",
+        status: "good"
+      },
+      {
+        id: "neonatal_mortality",
+        title: "Neonatal Mortality Rate",
+        value: 6.8,
+        unit: "per 1,000 live births",
+        target: "< 21",
+        status: "good"
+      },
+      {
+        id: "infant_mortality",
+        title: "Infant Mortality Rate",
+        value: 13.6,
+        unit: "per 1,000 live births",
+        target: "< 32",
+        status: "good"
+      }
+    ]
+  },
+  shwethal: {
+    name: "Shwe Thal Gyi RHC",
+    myanmarName: "ရွှေလှေကြီး RHC",
+    indicators: [
+      {
+        id: "mmr",
+        title: "Maternal Mortality Ratio",
+        value: 0.0,
+        unit: "per 100,000 live births",
+        target: "< 86",
+        status: "good"
+      },
+      {
+        id: "skilled_birth",
+        title: "Births Attended by Skilled Personnel",
+        value: 95,
+        unit: "%",
+        target: "> 85%",
+        status: "good"
+      },
+      {
+        id: "u5_mortality",
+        title: "Under-5 Mortality Rate",
+        value: 11.9,
+        unit: "per 1,000 live births",
+        target: "< 36",
+        status: "good"
+      },
+      {
+        id: "neonatal_mortality",
+        title: "Neonatal Mortality Rate",
+        value: 7.2,
+        unit: "per 1,000 live births",
+        target: "< 21",
+        status: "good"
+      },
+      {
+        id: "infant_mortality",
+        title: "Infant Mortality Rate",
+        value: 7.2,
+        unit: "per 1,000 live births",
+        target: "< 32",
         status: "good"
       }
     ]
