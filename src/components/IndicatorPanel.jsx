@@ -13,8 +13,8 @@ const IndicatorPanel = ({ regionData }) => {
   return (
     <div className="bg-white rounded-xl shadow-sm p-6">
       <div className="mb-6">
-        <h2 className="text-xl font-semibold text-gray-800">{regionData.name}</h2>
-        <p className="text-base text-gray-600 mt-1 font-myanmar">{regionData.myanmarName}</p>
+        <h2 className="text-xl font-semibold text-gray-800">{regionData.myanmarName}</h2>
+       
         <p className="text-sm text-gray-500 mt-2">Health SDG Indicators - 2025</p>
       </div>
       

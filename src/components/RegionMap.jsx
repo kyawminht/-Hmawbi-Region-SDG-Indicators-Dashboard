@@ -138,18 +138,13 @@ import React, { useState, useRef } from 'react';
                 x="280"
                 y="450"
                 textAnchor="middle"
-                className="text-[8px] md:text-[10px] font-medium fill-gray-800 pointer-events-none"
+                 className={`text-[18px] font-medium pointer-events-none transition-colors duration-150 ${
+                selectedRegion === 'yaeman' ? 'fill-white' : 'fill-gray-800'
+              }`}
               >
-                မြောင်းတကာ
+                မြောင်းတကာ RHC
               </text>
-              <text
-                x="280"
-                y="465"
-                textAnchor="middle"
-                className="text-[7px] md:text-[9px] fill-gray-600 pointer-events-none"
-              >
-                RHC
-              </text>
+              
             </g>
 
             {/* ဝါးနက်ချောင်း RHC - Southern */}
@@ -164,17 +159,11 @@ import React, { useState, useRef } from 'react';
                 x="430"
                 y="430"
                 textAnchor="middle"
-                className="text-[8px] md:text-[10px] font-medium fill-gray-800 pointer-events-none"
+                 className={`text-[18px] font-medium pointer-events-none transition-colors duration-150 ${
+                selectedRegion === 'warnet' ? 'fill-white' : 'fill-gray-800'
+              }`}
               >
-                ဝါးနက်ချောင်း
-              </text>
-              <text
-                x="430"
-                y="445"
-                textAnchor="middle"
-                className="text-[7px] md:text-[9px] fill-gray-600 pointer-events-none"
-              >
-                RHC
+                ဝါးနက်ချောင်း RHC
               </text>
             </g>
 
@@ -190,18 +179,13 @@ import React, { useState, useRef } from 'react';
                 x="650"
                 y="650"
                 textAnchor="middle"
-                className="text-[8px] md:text-[10px] font-medium fill-gray-800 pointer-events-none"
+                  className={`text-[18px] font-medium pointer-events-none transition-colors duration-150 ${
+                selectedRegion === 'satthwar' ? 'fill-white' : 'fill-gray-800'
+              }`}
               >
-                ဆပ်သွားတော
+                ဆပ်သွားတော RHC
               </text>
-              <text
-                x="650"
-                y="665"
-                textAnchor="middle"
-                className="text-[7px] md:text-[9px] fill-gray-600 pointer-events-none"
-              >
-                RHC
-              </text>
+             
             </g>
 
             {/* ရေကျော် RHC */}
@@ -216,18 +200,13 @@ import React, { useState, useRef } from 'react';
                 x="500"
                 y="770"
                 textAnchor="middle"
-                className="text-[8px] md:text-[10px] font-medium fill-gray-800 pointer-events-none"
+                 className={`text-[18px] font-medium pointer-events-none transition-colors duration-150 ${
+                selectedRegion === 'yaykyaw' ? 'fill-white' : 'fill-gray-800'
+              }`}
               >
-                ရေကျော်
+                ရေကျော် RHC
               </text>
-              <text
-                x="500"
-                y="785"
-                textAnchor="middle"
-                className="text-[7px] md:text-[9px] fill-gray-600 pointer-events-none"
-              >
-                RHC
-              </text>
+              
             </g>
 
             {/* ရွှေလှေကြီး RHC - Eastern */}
@@ -242,17 +221,11 @@ import React, { useState, useRef } from 'react';
                 x="340"
                 y="770"
                 textAnchor="middle"
-                className="text-[8px] md:text-[10px] font-medium fill-gray-800 pointer-events-none"
+                 className={`text-[18px] font-medium pointer-events-none transition-colors duration-150 ${
+                selectedRegion === 'shwethal' ? 'fill-white' : 'fill-gray-800'
+              }`}
               >
                 ရွှေလှေကြီး
-              </text>
-              <text
-                x="340"
-                y="785"
-                textAnchor="middle"
-                className="text-[7px] md:text-[9px] fill-gray-600 pointer-events-none"
-              >
-                RHC
               </text>
             </g>
 
@@ -268,18 +241,13 @@ import React, { useState, useRef } from 'react';
                 x="440"
                 y="635"
                 textAnchor="middle"
-                className="text-[9px] md:text-xs font-bold fill-gray-800 pointer-events-none"
+               className={`text-[18px] font-medium pointer-events-none transition-colors duration-150 ${
+                selectedRegion === 'mch' ? 'fill-white' : 'fill-gray-800'
+              }`}
               >
                 MCH
               </text>
-              <text
-                x="440"
-                y="650"
-                textAnchor="middle"
-                className="text-[6px] md:text-[8px] fill-gray-600 pointer-events-none md:block hidden"
-              >
-                Maternal and Child Health
-              </text>
+              
             </g>
           </svg>
         </div>
@@ -293,7 +261,7 @@ import React, { useState, useRef } from 'react';
         </div>
         <div className="flex items-center gap-2">
           <div className={`w-3 h-3 ${selectedRegion === 'yaeman' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded flex-shrink-0`}></div>
-          <span className="text-xs truncate">မြောင်းတကာ RHC</span>
+          <span className="text-[18px] text-white">မြောင်းတကာ RHC</span>
         </div>
         <div className="flex items-center gap-2">
           <div className={`w-3 h-3 ${selectedRegion === 'satthwar' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded flex-shrink-0`}></div>
@@ -305,7 +273,7 @@ import React, { useState, useRef } from 'react';
         </div>
         <div className="flex items-center gap-2">
           <div className={`w-3 h-3 ${selectedRegion === 'shwethal' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded flex-shrink-0`}></div>
-          <span className="text-xs truncate">ရွှေလှေကြီး RHC</span>
+          <span className="text-xs truncate">ရွှေလှေကြီး <br/> RHC</span>
         </div>
         <div className="flex items-center gap-2">
           <div className={`w-3 h-3 ${selectedRegion === 'warnet' ? 'bg-blue-600' : 'bg-blue-200'} border border-blue-800 rounded flex-shrink-0`}></div>
